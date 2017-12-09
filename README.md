@@ -31,6 +31,10 @@ Virtualbox is used by vagrant to spin up the VM
 - Run `vagrant suspend` to stop the running VM, saving the current state (will resume from here on next `vagrant up`)
 - Run `vagrant destroy` to remove the VM (useful if the VM needs spinning up from scratch again)
 
+# Choosing a VM
+A list of available VMs can be viewed in `./vmList.rb`. These can be used be setting the `BOX_NAME` env var to one of the 'keys' (the strings on the left of the list).
+- Check the correct one is available / running with the `vagrant status` command
+
 ## Accessing shared folders
 note - This only needs to be done once, when initialising the VM (e.g. first time using it, or after a `vagrant destroy`)
 - Run `vagrant up`

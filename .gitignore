@@ -1,2 +1,5 @@
-#VM boxes
+# VM boxes
 .vagrant
+
+# Editor config/s
+.vscode
