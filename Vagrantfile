@@ -7,6 +7,9 @@ box_name = box_name = ENV['box_name'] != nil ? ENV['box_name'].strip : 'win7-ie1
 # Box repo defaults to http://aka.ms (where modern.ie boxes are stored). Set env var to override
 box_repo = ENV['box_repo'] != nil ? ENV['box_repo'].strip : 'http://aka.ms'
 
+# Env variable for users choosing to RDP into the vm - toggles whether gui should be displayed by virtualbox
+vm_gui = ENV['vm_gui'] == 'false' ? false : true
+
 Vagrant.configure("2") do |config|
   ## Box
 
@@ -34,7 +37,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.provider "virtualbox" do |vb|
     # Display the VirtualBox GUI when booting the machine
-    vb.gui = true
+    vb.gui = vm_gui
     vb.customize ["modifyvm", :id, "--memory", "1024"]
     vb.customize ["modifyvm", :id, "--vram", "128"]
     vb.customize ["modifyvm", :id,  "--cpus", "2"]
