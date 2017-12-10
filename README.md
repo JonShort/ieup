@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="https://raw.githubusercontent.com/jonshort/ieup/master/logo.svg" alt="ieup" title="ieup" width="200" style="max-width: 100%;">
+  <img src="https://raw.githubusercontent.com/jonshort/ieup/master/assets/logo.png" alt="ieup" title="ieup" width="200">
   <br>
     ieup
   <br>
