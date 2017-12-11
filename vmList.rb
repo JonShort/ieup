@@ -1,6 +1,6 @@
 module VMList
   # Box names, keys are what user will add to env var, literal is used for download link
-  BOXES = {
+  BOXES ||= {
     "xp-ie6" => "vagrant-xp-ie6",
     "xp-ie8" => "vagrant-xp-ie8",
     "vista-ie7" => "vagrant-vista-ie7",

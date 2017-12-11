@@ -6,11 +6,11 @@ include VMList
 
 # Env Variables
 # Override box to use - default is "win7-ie11"
-BOX_NAME = ENV["BOX_NAME"] != nil ? ENV["BOX_NAME"].strip : "win7-ie11"
+BOX_NAME ||= ENV["BOX_NAME"] != nil ? ENV["BOX_NAME"].strip : "win7-ie11"
 # Override box download location - default http://aka.ms (where modern.ie boxes are stored).
-BOX_REPO = ENV["BOX_REPO"] != nil ? ENV["BOX_REPO"].strip : "http://aka.ms"
+BOX_REPO ||= ENV["BOX_REPO"] != nil ? ENV["BOX_REPO"].strip : "http://aka.ms"
 # Env variable for users choosing to RDP into the vm - toggles whether gui should be displayed by virtualbox
-BOX_GUI = ENV["BOX_GUI"] == "false" ? false : true
+BOX_GUI ||= ENV["BOX_GUI"] == "false" ? false : true
 
 Vagrant.configure("2") do |config|
   # If the box is win7-ie11, the convention for the box name is modern.ie/win7-ie11
