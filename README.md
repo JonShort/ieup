@@ -1,3 +1,5 @@
+:warning: Note - This project is Deprecated, as Microsoft doesn't seem to support the VM downloads anymore :warning:
+
 <h1 align="center">
   <img src="https://raw.githubusercontent.com/jonshort/ieup/master/assets/logo.png" alt="ieup" title="ieup" width="200">
   <br>
